@@ -2,24 +2,26 @@
   "name": "use-rtk-slice",
   "version": "0.1.0",
   "description": "A React hook for streamlining the usage of Redux Toolkit slices",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "tag": "next"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist ; tsc -p tsconfig.build.json",
+    "test": "vitest --run src/useSlice.test.tsx"
   },
   "keywords": [
     "react",
     "redux",
-    "reduxtoolkit",
+    "redux-toolkit",
     "slice"
   ],
   "homepage": "https://github.com/Lambdaphile/use-rtk-slice",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Lambdaphile/use-rtk-slice.git"
+    "url": "git+ssh://git@github.com/Lambdaphile/use-rtk-slice.git"
   },
   "files": [
     "dist"
@@ -27,12 +29,26 @@
   "author": "Emrah Seidov",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-typescript": "^7.27.1",
+    "@eslint/js": "^9.27.0",
     "@reduxjs/toolkit": "^2.7.0",
+    "@testing-library/react": "^16.3.0",
     "@types/react": "^19.1.2",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.2.0",
+    "jsdom": "^26.1.0",
     "prettier": "^3.5.3",
     "react": "^19.1.0",
     "react-redux": "^9.2.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.0",
+    "vitest": "^3.1.4"
   },
   "peerDependencies": {
     "@reduxjs/toolkit": "^2.7.0",
