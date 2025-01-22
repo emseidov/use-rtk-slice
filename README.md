@@ -5,10 +5,10 @@
   <p>
     <a href="https://www.npmjs.com/package/use-rtk-slice"><img alt="npm" src="https://img.shields.io/npm/v/use-rtk-slice.svg"></a>
     <a href="https://www.npmjs.com/package/use-rtk-slice" target="_blank"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/use-rtk-slice.svg" /></a>
+    <a href="https://github.com/Lambdaphile/use-rtk-slice/blob/main/src/useSlice.test.tsx"><img alt="Coverage" src="https://img.shields.io/badge/coverage-100%25-brightgreen"></a>
     <a href="https://www.typescriptlang.org/"><img alt="TypeScript Ready" src="https://img.shields.io/badge/TypeScript-Ready-blue.svg"></a>
   </p>
-  <br />
-  <pre><code>npm i use-rtk-slice</code></pre>
+  <pre>npm i <a href="https://www.npmjs.com/package/use-rtk-slice">use-rtk-slice</a></pre>
 </div>
 <hr/>
 
@@ -62,7 +62,7 @@ export const todosSlice = createSlice({
 })
 ```
 
-Destructure the `state`, and bound `actions` and `selectors` from the slice using the `useSlice` hook:
+Destructure the `state`, and the bound `actions` and `selectors` from the slice as needed using, the `useSlice` hook:
 
 `TodoList.tsx`
 
