@@ -1,6 +1,6 @@
-import { useRef, RefObject } from 'react'
-import { Slice } from '@reduxjs/toolkit'
-import { ObjectEntriesReturn, Expand, BoundSelectors } from './utils.types'
+import { useRef, type RefObject } from 'react'
+import type { Slice } from './../useSlice.types'
+import type { ObjectEntriesReturn, Expand, BoundSelectors } from './utils.types'
 
 export function objectEntries<T extends Record<string, any>>(
   obj: T
@@ -36,11 +36,11 @@ export function bindSelectors<
   K extends Slice['name'],
   V extends RefObject<ReturnType<Slice['selectSlice']>>
 >(selectors: T, sliceName: K, stateRef: V) {
-  return objectEntries(selectors).reduce<BoundSelectors<any>>(
-    (accumulator, [name, fn]: [any, any]) =>
+  return objectEntries(selectors).reduce(
+    (accumulator, [name, fn]) =>
       assoc(accumulator, name, (...rest: any[]) =>
         fn({ [sliceName]: stateRef.current }, ...rest)
       ),
-    {}
+    {} as BoundSelectors<T>
   )
 }

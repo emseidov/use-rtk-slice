@@ -1,5 +1,9 @@
-import type { Slice } from '@reduxjs/toolkit'
+import type { Slice as ToolkitSlice } from '@reduxjs/toolkit'
 import type { BoundSelectors } from './utils'
+
+export type Slice = Omit<ToolkitSlice, 'selectors'> & {
+  selectors: Record<string, (state: any, ...params: any[]) => any>
+}
 
 export type SliceState<T extends Slice> = ReturnType<T['selectSlice']>
 export type SliceActions<T extends Slice> = T['actions']

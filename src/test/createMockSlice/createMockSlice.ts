@@ -1,7 +1,7 @@
 import { assoc } from '../../utils'
+import type { Slice } from '../../useSlice.types'
 import type {
   Config,
-  MockSlice,
   MockValues,
   MockSliceReturn
 } from './createMockSlice.types'
@@ -9,7 +9,7 @@ import type {
 export function createMockSlice(config: Config) {
   const implementations: Record<string, Record<string, any>> = {}
 
-  function mockSlice<T extends MockSlice>(
+  function mockSlice<T extends Slice>(
     mockedSlice: T,
     mockValues: Partial<MockValues<T>> = {}
   ): MockSliceReturn<T> {

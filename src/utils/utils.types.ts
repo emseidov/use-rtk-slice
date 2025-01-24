@@ -1,17 +1,13 @@
+import type { Slice } from '../useSlice.types'
+
 export type ObjectEntriesReturn<T> = {
   [K in keyof T]: [K, T[K]]
 }[keyof T][] & {}
 
 export type Expand<T> = { [P in keyof T]: T[P] } & {}
 
-export type BoundSelector<T extends (...args: any[]) => any> = T extends (
-  state: any,
-  ...args: infer Args
-) => infer Return
-  ? (...args: Args) => Return
-  : never
+export type OmitFirst<T extends any[]> = T extends [any, ...infer R] ? R : never
 
-export type BoundSelectors<T extends Record<string, (...args: any[]) => any>> =
-  {
-    [P in keyof T]: BoundSelector<T[P]>
-  }
+export type BoundSelectors<T extends Slice['selectors']> = {
+  [K in keyof T]: (...params: OmitFirst<Parameters<T[K]>>) => ReturnType<T[K]>
+}

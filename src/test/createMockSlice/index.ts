@@ -1,8 +1,6 @@
 export { createMockSlice } from './createMockSlice'
 export type {
   Config,
-  MockSlice,
   MockSliceReturn,
-  MockValues,
-  OmitFirst
+  MockValues
 } from './createMockSlice.types'
