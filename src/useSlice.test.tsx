@@ -18,7 +18,7 @@ interface Todo {
 const initialState: Todo[] = [
   {
     id: Date.now(),
-    name: 'Feed the cat 🐱',
+    name: 'Be Awesome 🦄',
     done: false
   }
 ]
@@ -68,7 +68,7 @@ describe('useSlice', () => {
   })
 
   it('should return bound slice actions', () => {
-    act(() => result.current.actions.addTodo('Feed the dog 🐶'))
+    act(() => result.current.actions.addTodo('Spread Good Vibes 🍀'))
     expect(result.current.state.length).toBe(2)
 
     const todoId = result.current.state[1].id

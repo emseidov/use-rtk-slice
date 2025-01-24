@@ -13,7 +13,7 @@ interface Todo {
 const initialState: Todo[] = [
   {
     id: Date.now(),
-    name: 'Feed the cat 🐱',
+    name: 'Be Awesome 🦄',
     done: false
   }
 ]
@@ -58,19 +58,19 @@ describe('mockSlice (Jest)', () => {
 
   it('should mock state', () => {
     mockSlice(todosSlice, {
-      state: [{ id: 0, name: 'Mock todo', done: false }]
+      state: [{ id: 0, name: 'Be Awesome 🦄', done: false }]
     })
 
     const { result } = renderHook(() => useTestSlice())
-    expect(result.current.state[0].name).toBe('Mock todo')
+    expect(result.current.state[0].name).toBe('Be Awesome 🦄')
   })
 
   it('should mock selector return', () => {
     mockSlice(todosSlice, {
-      selectCompleted: () => [{ id: 0, name: 'Mock todo', done: false }],
+      selectCompleted: () => [{ id: 0, name: 'Be Awesome 🦄', done: false }],
       selectFirstN: () => [
-        { id: 0, name: 'Mock todo 1', done: false },
-        { id: 1, name: 'Mock todo 2', done: false }
+        { id: 0, name: 'Be Awesome 🦄', done: false },
+        { id: 1, name: 'Spread Good Vibes 🍀', done: false }
       ]
     })
 
@@ -83,7 +83,7 @@ describe('mockSlice (Jest)', () => {
     const { addTodo } = mockSlice(todosSlice)
 
     const { result } = renderHook(() => useTestSlice())
-    result.current.actions.addTodo('Spy action')
-    expect(addTodo).toHaveBeenCalledWith('Spy action')
+    result.current.actions.addTodo('Be Awesome 🦄')
+    expect(addTodo).toHaveBeenCalledWith('Be Awesome 🦄')
   })
 })
