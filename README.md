@@ -46,7 +46,7 @@ interface Todo {
 const initialState: Todo[] = [
   {
     id: Date.now(),
-    name: '🧪 Write unit tests',
+    name: 'Be Awesome 🦄',
     done: false
   }
 ]
@@ -68,9 +68,7 @@ const todosSlice = createSlice({
     }
   },
   selectors: {
-    selectCompleted(state) {
-      return state.filter((todo) => todo.done)
-    }
+    selectCompleted: (state) => state.filter((todo) => todo.done)
   }
 })
 ```
@@ -131,8 +129,8 @@ describe('TodoList', () => {
   it('should render todos', () => {
     mockSlice(todosSlice, {
       state: [
-        { id: 0, name: '🧪 Write unit tests', done: false },
-        { id: 1, name: '📝 Update README', done: false }
+        { id: 0, name: 'Be Awesome 🦄', done: false },
+        { id: 1, name: 'Spread Good Vibes 🍀', done: false }
       ]
     })
 
@@ -154,7 +152,7 @@ describe('TodoList', () => {
 
   it('should render completed todo count', () => {
     mockSlice(todosSlice, {
-      selectCompleted: () => [{ id: 0, name: '🧪 Write unit tests', done: true }]
+      selectCompleted: () => [{ id: 0, name: 'Be Awesome 🦄', done: true }]
     })
 
     render(<App />)
@@ -174,7 +172,7 @@ describe('TodoList', () => {
 
   it('should toggle todos', () => {
     const { toggleTodo } = mockSlice(todosSlice, {
-      state: [{ id: 0, name: '🧪 Write unit tests', done: false }]
+      state: [{ id: 0, name: 'Be Awesome 🦄', done: false }]
     })
 
     render(<App />)

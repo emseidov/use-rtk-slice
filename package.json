@@ -1,8 +1,7 @@
 {
   "name": "use-rtk-slice",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A React hook for streamlining the usage of Redux Toolkit slices",
-  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
@@ -26,9 +25,22 @@
     "url": "git+ssh://git@github.com/Lambdaphile/use-rtk-slice.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "dist/test/vitest",
+    "dist/test/jest"
   ],
-  "author": "Emrah Seidov",
+  "exports": {
+    ".": "./dist/index.js",
+    "./test/vitest": "./dist/test/vitest/index.js",
+    "./test/jest": "./dist/test/jest/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "test/vitest": ["dist/test/vitest/index.d.ts"],
+      "test/jest": ["dist/test/jest/index.d.ts"]
+    }
+  },
+  "author": "Emrah Seidov (Lambdaphile)",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.27.1",
