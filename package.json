@@ -1,14 +1,16 @@
 {
   "name": "use-rtk-slice",
-  "version": "1.0.0",
-  "description": "A React hook for streamlining the usage of Redux Toolkit slices",
-  "main": "dist/index.js",
+  "version": "1.1.0",
+  "description": "React hook for working with Redux Toolkit slices, with zero setup and boilerplate ⚛️ 🛠️",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "tag": "next"
   },
   "scripts": {
-    "build": "rm -rf dist ; tsc -p tsconfig.build.json",
+    "build": "rm -rf ./dist && tsup",
     "test": "npm run test:vitest && npm run test:jest",
     "test:vitest": "vitest --run src/useSlice.test.tsx src/test/vitest/mockSlice.test.ts",
     "test:jest": "jest src/test/jest/mockSlice.test.ts"
@@ -25,20 +27,39 @@
     "url": "git+ssh://git@github.com/Lambdaphile/use-rtk-slice.git"
   },
   "files": [
-    "dist",
-    "dist/test/vitest",
-    "dist/test/jest"
+    "dist"
   ],
   "exports": {
-    ".": "./dist/index.js",
-    "./test/vitest": "./dist/test/vitest/index.js",
-    "./test/jest": "./dist/test/jest/index.js"
-  },
-  "typesVersions": {
-    "*": {
-      "test/vitest": ["dist/test/vitest/index.d.ts"],
-      "test/jest": ["dist/test/jest/index.d.ts"]
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "require": "./dist/index.cjs"
+      }
+    },
+    "./test/jest": {
+      "import": {
+        "types": "./dist/test/jest/index.d.ts",
+        "import": "./dist/test/jest/index.js"
+      },
+      "require": {
+        "types": "./dist/test/jest/index.d.cts",
+        "require": "./dist/test/jest/index.cjs"
+      }
+    },
+    "./test/vitest": {
+      "import": {
+        "types": "./dist/test/vitest/index.d.ts",
+        "import": "./dist/test/vitest/index.js"
+      }
     }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
   },
   "author": "Emrah Seidov (Lambdaphile)",
   "license": "MIT",
@@ -65,13 +86,16 @@
     "react": "^19.1.0",
     "react-redux": "^9.2.0",
     "ts-jest": "^29.3.4",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.33.0",
     "vitest": "^3.1.4"
   },
   "peerDependencies": {
     "@reduxjs/toolkit": "^2.7.0",
+    "jest": "^29.7.0",
     "react": "^19.1.0",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "vitest": "^3.1.4"
   }
 }

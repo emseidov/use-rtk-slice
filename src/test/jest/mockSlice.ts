@@ -1,11 +1,11 @@
-import * as useSlice from '../../useSlice'
+import { useSliceRef } from '../../useSlice'
 import { createMockSlice } from '../createMockSlice'
 
 const jestConfig = {
   createSpy: () => jest.fn(),
   mockImplementation: (implementations: any) =>
     jest
-      .spyOn(useSlice, 'useSlice')
+      .spyOn(useSliceRef, 'useSlice')
       .mockImplementation((slice) => implementations[slice.name])
 }
 

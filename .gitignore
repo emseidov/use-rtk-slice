@@ -3,3 +3,4 @@ playground/
 dist/
 
 .DS_Store
+*.tgz

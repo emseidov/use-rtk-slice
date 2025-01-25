@@ -4,7 +4,7 @@ import { bindActionCreators } from '@reduxjs/toolkit'
 import { useLatest, bindSelectors } from './utils'
 import type { Slice, UseSliceReturn } from './useSlice.types'
 
-export function useSlice<T extends Slice>(slice: T): UseSliceReturn<T> {
+function useSlice<T extends Slice>(slice: T): UseSliceReturn<T> {
   const { selectSlice, actions, selectors, name } = slice
   const state = useSelector(selectSlice)
   const stateRef = useLatest(state)
@@ -21,3 +21,5 @@ export function useSlice<T extends Slice>(slice: T): UseSliceReturn<T> {
 
   return [state, boundActions, boundSelectors]
 }
+
+export const useSliceRef = { useSlice }

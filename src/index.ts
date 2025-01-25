@@ -1,3 +1,3 @@
-import { useSlice } from './useSlice'
+import { useSliceRef } from './useSlice'
 
-export default useSlice
+export default useSliceRef.useSlice

@@ -2,7 +2,7 @@ import { describe, expect, it, afterEach } from 'vitest'
 import { renderHook } from '@testing-library/react'
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { append } from '../../utils'
-import { useSlice } from '../../useSlice'
+import { useSliceRef } from '../../useSlice'
 import { mockSlice } from './mockSlice'
 
 interface Todo {
@@ -47,7 +47,7 @@ export const todosSlice = createSlice({
 })
 
 function useTestSlice() {
-  const [state, actions, selectors] = useSlice(todosSlice)
+  const [state, actions, selectors] = useSliceRef.useSlice(todosSlice)
 
   return { state, actions, selectors }
 }

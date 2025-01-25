@@ -7,7 +7,7 @@ import {
   type PayloadAction
 } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
-import { useSlice } from './useSlice'
+import { useSliceRef } from './useSlice'
 
 interface Todo {
   id: number
@@ -49,7 +49,7 @@ const store = configureStore({
 })
 
 function useTestSlice() {
-  const [state, actions, selectors] = useSlice(todosSlice)
+  const [state, actions, selectors] = useSliceRef.useSlice(todosSlice)
 
   return { state, actions, selectors }
 }
