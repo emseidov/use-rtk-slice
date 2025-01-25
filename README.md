@@ -5,7 +5,7 @@
   <p>
     <a href="https://www.npmjs.com/package/use-rtk-slice" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/use-rtk-slice.svg?label=NPM"></a>
     <a href="https://www.npmjs.com/package/use-rtk-slice" target="_blank"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/use-rtk-slice.svg?label=Downloads" /></a>
-    <a href="https://github.com/Lambdaphile/use-rtk-slice/blob/main/src/useSlice.test.tsx" target="_blank"><img alt="Coverage" src="https://img.shields.io/badge/Coverage-100%25-brightgreen"></a>
+    <a href="https://codecov.io/gh/Lambdaphile/use-rtk-slice/tree/main" target="_blank"><img src="https://img.shields.io/codecov/c/github/Lambdaphile/use-rtk-slice?label=Coverage&token=0TD18JUTH7" alt="Codecov coverage" /></a>
     <a href="https://www.typescriptlang.org/" target="_blank"><img alt="TypeScript Ready" src="https://img.shields.io/badge/TypeScript-Ready-blue.svg"></a>
   </p>
   <pre>npm i <a href="https://www.npmjs.com/package/use-rtk-slice">use-rtk-slice</a></pre>

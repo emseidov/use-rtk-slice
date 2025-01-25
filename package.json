@@ -10,10 +10,12 @@
     "tag": "next"
   },
   "scripts": {
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "npx tsc --noEmit",
     "build": "rm -rf ./dist && tsup",
     "test": "npm run test:vitest && npm run test:jest",
-    "test:vitest": "vitest --run src/useSlice.test.tsx src/test/vitest/mockSlice.test.ts",
-    "test:jest": "jest src/test/jest/mockSlice.test.ts"
+    "test:vitest": "vitest --run --coverage",
+    "test:jest": "jest src/test/jest/mockSlice.test.ts --coverage"
   },
   "keywords": [
     "react",
@@ -97,5 +99,8 @@
     "react": "^19.1.0",
     "react-redux": "^9.2.0",
     "vitest": "^3.1.4"
+  },
+  "dependencies": {
+    "@vitest/coverage-v8": "^3.2.1"
   }
 }
