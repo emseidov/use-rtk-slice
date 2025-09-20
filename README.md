@@ -1,11 +1,11 @@
 <div align="center">
   <h1>use-rtk-slice</h1>
-  <p>A <a href="https://react.dev/">React</a> hook for working with <a href="https://redux-toolkit.js.org/">Redux Toolkit</a> slices, with zero setup and boilerplate ⚛️ 🛠️
+  <p>⚛️ 🎣 <a href="https://react.dev/">React</a> hook for using <a href="https://redux-toolkit.js.org/">Redux Toolkit</a> slices, with zero setup and boilerplate.
   </p>
   <p>
     <a href="https://www.npmjs.com/package/use-rtk-slice" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/use-rtk-slice.svg?label=NPM"></a>
     <a href="https://www.npmjs.com/package/use-rtk-slice" target="_blank"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/use-rtk-slice.svg?label=Downloads" /></a>
-    <a href="https://codecov.io/gh/Lambdaphile/use-rtk-slice/tree/main" target="_blank"><img src="https://img.shields.io/codecov/c/github/Lambdaphile/use-rtk-slice?label=Coverage&token=0TD18JUTH7" alt="Codecov coverage" /></a>
+    <a href="https://codecov.io/gh/emseidov/use-rtk-slice/tree/main" target="_blank"><img src="https://img.shields.io/codecov/c/github/emseidov/use-rtk-slice?label=Coverage&token=0TD18JUTH7" alt="Codecov coverage" /></a>
     <a href="https://www.typescriptlang.org/" target="_blank"><img alt="TypeScript Ready" src="https://img.shields.io/badge/TypeScript-Ready-blue.svg"></a>
   </p>
   <pre>npm i <a href="https://www.npmjs.com/package/use-rtk-slice">use-rtk-slice</a></pre>

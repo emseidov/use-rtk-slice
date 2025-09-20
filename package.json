@@ -1,7 +1,7 @@
 {
   "name": "use-rtk-slice",
-  "version": "1.1.0",
-  "description": "React hook for working with Redux Toolkit slices, with zero setup and boilerplate ⚛️ 🛠️",
+  "version": "1.1.1",
+  "description": "⚛️ 🎣 React hook for using Redux Toolkit slices, with zero setup and boilerplate.",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -23,10 +23,10 @@
     "redux-toolkit",
     "slice"
   ],
-  "homepage": "https://github.com/Lambdaphile/use-rtk-slice",
+  "homepage": "https://github.com/emseidov/use-rtk-slice",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Lambdaphile/use-rtk-slice.git"
+    "url": "git+ssh://git@github.com/emseidov/use-rtk-slice.git"
   },
   "files": [
     "dist"
@@ -63,7 +63,7 @@
   "engines": {
     "node": ">=18"
   },
-  "author": "Emrah Seidov (Lambdaphile)",
+  "author": "Emrah Seidov",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.27.1",
