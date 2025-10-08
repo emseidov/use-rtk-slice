@@ -4,8 +4,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    include: ['src/**/*.test.{ts,tsx}'], // <- restricts to src/
-    exclude: ['src/test/jest/**'], // 👈 this now works!
+    include: ['src/**/*.test.{ts,tsx}'],
+    exclude: ['src/test/jest/**'],
     coverage: {
       provider: 'v8',
       reportsDirectory: './coverage',
